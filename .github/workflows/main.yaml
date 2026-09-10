@@ -1,4 +1,4 @@
-name: Tests
+name: Deploy step
 on:
   push:
     branches:
@@ -19,6 +19,7 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: develop
+      url: https://develop.example.com
     steps:
       - name: Deploy to develop
         run: |
@@ -30,6 +31,7 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: staging
+      url: https://staging.example.com
     steps:
       - name: Deploy to staging
         run: |
@@ -50,6 +52,7 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: production
+      url: https://www.example.com
     steps:
       - name: Deploy to production
         run: |
