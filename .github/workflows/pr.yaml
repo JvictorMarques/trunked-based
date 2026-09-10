@@ -1,0 +1,29 @@
+name: Tests
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check linnt
+        run: |
+          echo "Checking lint..."
+          # Add your test commands here
+
+      - name: Run unit tests
+        run: |
+          echo "Running unit tests..."
+          # Add your test commands here
+
+      - name: Run integration tests
+        run: |
+          echo "Running integration tests..."
+          # Add your test commands here
+
+      - name: Check coverage
+        run: |
+          echo "Checking coverage..."
+          # Add your test commands here
